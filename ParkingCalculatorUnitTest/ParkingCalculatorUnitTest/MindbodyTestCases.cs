@@ -19,7 +19,7 @@ namespace ParkingCalculatorUnitTest
         {
             ParkingPage.Create()
                 .WithParkingLot(ParkingLotType.STP)
-                .WithStartDateAndTime(new DateTime(2014, 1, 1, 22, 0, 0 ))
+                .WithStartDateAndTime(new DateTime(2014, 1, 1, 22, 0, 0))
                 .WithEndDateAndTime(new DateTime(2014, 1, 1, 23, 0, 0))
                 .Calculate();
 
@@ -34,8 +34,8 @@ namespace ParkingCalculatorUnitTest
         {
             ParkingPage.Create()
                 .WithParkingLot(ParkingLotType.LTS)
-                 .WithStartDateAndTime(new DateTime(2014, 1, 1, 0, 0, 0))
-                .WithEndDateAndTime(new DateTime(2014, 2, 1, 0, 0, 0))
+                .WithStartDateAndTimeFromCalendar(new DateTime(2016, 1, 1, 0, 0, 0))
+                .WithEndDateAndTimeFromCalendar(new DateTime(2016, 2, 1, 0, 0, 0))
                 .Calculate();
 
             Assert.AreEqual("$ 270.00", ParkingPageCost.Total, "The cost is different");

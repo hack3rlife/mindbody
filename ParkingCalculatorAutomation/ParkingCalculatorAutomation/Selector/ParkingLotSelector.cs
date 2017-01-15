@@ -2,9 +2,9 @@
 
 namespace ParkingCalculatorAutomation
 {
-    public static class ParkingLotSelector
+    internal static class ParkingLotSelector
     {
-        public static void Select(string parkingType)
+        internal static void Select(string parkingType)
         {
             var dropDown = Selector.SelectById("Lot");
             var select = new SelectElement(dropDown);

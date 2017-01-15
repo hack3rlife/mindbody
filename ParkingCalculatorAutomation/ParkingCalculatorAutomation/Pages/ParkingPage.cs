@@ -25,6 +25,7 @@ namespace ParkingCalculatorAutomation
         private string entryTimeAux;
         private string exitDateAux;
         private string exitTimeAux;
+        private bool fromCalendar;
 
         public ParkingCommand()
         {
@@ -49,9 +50,10 @@ namespace ParkingCalculatorAutomation
             return this;
         }
 
-        public ParkingCommand WithEndDateAndTime(DateTime exit)
+        public ParkingCommand WithStartDateAndTimeFromCalendar(DateTime entry)
         {
-            this.exitDate = exit;
+            this.fromCalendar = true;
+            this.entryDate = entry;
             return this;
         }
 
@@ -59,6 +61,19 @@ namespace ParkingCalculatorAutomation
         {
             this.exitDateAux = date;
             this.exitTimeAux = time;
+            return this;
+        }
+
+        public ParkingCommand WithEndDateAndTime(DateTime exit)
+        {
+            this.exitDate = exit;
+            return this;
+        }
+
+        public ParkingCommand WithEndDateAndTimeFromCalendar(DateTime exit)
+        {
+            this.fromCalendar = true;
+            this.exitDate = exit;
             return this;
         }
 
@@ -116,6 +131,10 @@ namespace ParkingCalculatorAutomation
             {
                 entryDate.SendKeys(this.entryDateAux);
             }
+            else if (this.fromCalendar)
+            {
+                DatePicker.SetEntryDate(this.entryDate);
+            }
             else
             {
                 entryDate.SendKeys(this.entryDate.ToShortDateString());
@@ -133,7 +152,7 @@ namespace ParkingCalculatorAutomation
 
                 var exitAmPm = DateTimeNavigation.ExitTimeAMPM.Select();
 
-               if (this.exitDate.ToShortTimeString().Contains("AM"))
+                if (this.exitDate.ToShortTimeString().Contains("AM"))
                 {
                     exitTime.SendKeys(string.Format("{0}:{1}", this.exitDate.Hour, this.exitDate.Minute));
                     exitAmPm[0].Click();
@@ -151,6 +170,10 @@ namespace ParkingCalculatorAutomation
             if (exitDateAux != null)
             {
                 exitDate.SendKeys(this.exitDateAux);
+            }
+            else if (fromCalendar)
+            {
+                DatePicker.SeExittDate(this.exitDate);
             }
             else
             {

@@ -11,19 +11,25 @@ namespace ParkingCalculatorAutomation
             return Driver.Instance.FindElement(By.Id(id));
         }
 
-        public static ReadOnlyCollection<IWebElement> SelectByName(string name)
+        public static IWebElement SelectByName(string name)
+        {
+            return Driver.Instance.FindElement(By.Name(name));
+        }
+
+        public static ReadOnlyCollection<IWebElement> SelectElementsByName(string name)
         {
             return Driver.Instance.FindElements(By.Name(name));
         }
 
-        internal static IWebElement SelectByXPath(string xpath)
+        public static IWebElement SelectByXPath(string xpath)
         {
             return Driver.Instance.FindElement(By.XPath(xpath));
         }
 
-        internal static IWebElement SelectByXPath(object css)
+        public static IWebElement SelectByLinkText(string text)
         {
-            throw new NotImplementedException();
+            return Driver.Instance.FindElement(By.LinkText(text));
+
         }
     }
 }
