@@ -15,7 +15,7 @@ namespace ParkingCalculatorUnitTest
 
         [TestMethod]
         [TestCategory("EdgeCases")]
-        public void Morethanayear()
+        public void ParkingCalculator_When_IsLeapYear_YearScenario()
         {
             ParkingPage.Create()
                 .WithParkingLot(ParkingLotType.STP)
@@ -29,7 +29,7 @@ namespace ParkingCalculatorUnitTest
 
         [TestMethod]
         [TestCategory("EdgeCases")]
-        public void Morethanamonth()
+        public void ParkingCalculator_When_IsLeapYear_MonthScenario()
         {
             ParkingPage.Create()
                .WithParkingLot(ParkingLotType.STP)
@@ -43,21 +43,21 @@ namespace ParkingCalculatorUnitTest
 
         [TestMethod]
         [TestCategory("EdgeCases")]
-        public void Morethanaday()
+        public void ParkingCalculator_When_DayLightSavingTime()
         {
             ParkingPage.Create()
-              .WithParkingLot(ParkingLotType.STP)
+              .WithParkingLot(ParkingLotType.LTS)
               .WithStartDateAndTime(new DateTime(2016, 3, 12, 21, 30, 0))
               .WithEndDateAndTime(new DateTime(2016, 3, 13, 23, 15, 0))
               .Calculate();
 
-            Assert.AreEqual("$ 28.00", ParkingPageCost.Total, "The cost is different");
+            Assert.AreEqual("$ 12.00", ParkingPageCost.Total, "The cost is different");
             Assert.AreEqual("        (1 Days, 0 Hours, 45 Minutes)", ParkingPageCost.Description, "Datetime is incorrect");
         }
 
         [TestMethod]
         [TestCategory("EdgeCases")]
-        public void Morethananhour()
+        public void ParkingCalculator_When_FractionTime_IsLowerBound()
         {
             ParkingPage.Create()
               .WithParkingLot(ParkingLotType.STP)
@@ -71,7 +71,7 @@ namespace ParkingCalculatorUnitTest
 
         [TestMethod]
         [TestCategory("EdgeCases")]
-        public void Hourandahalf()
+        public void ParkingCalculator_When_FractionTime_IsUpperBound()
         {
             ParkingPage.Create()
               .WithParkingLot(ParkingLotType.STP)
