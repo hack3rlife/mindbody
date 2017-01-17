@@ -31,5 +31,10 @@ namespace ParkingCalculatorAutomation
             return Driver.Instance.FindElement(By.LinkText(text));
 
         }
+
+        public static IWebElement SelectByCss(string css)
+        {
+            return Driver.Instance.FindElement(By.CssSelector(css));
+        }
     }
 }

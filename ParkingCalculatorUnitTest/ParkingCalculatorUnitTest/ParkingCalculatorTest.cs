@@ -15,6 +15,7 @@ namespace ParkingCalculatorUnitTest
         }
 
         [TestCleanup]
+        [TestCategory("PositiveTests")]
         public void CleanUp()
         {
             Driver.Instance.Close();

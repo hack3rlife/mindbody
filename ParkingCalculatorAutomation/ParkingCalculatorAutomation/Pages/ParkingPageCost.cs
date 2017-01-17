@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium;
+using ParkingCalculatorAutomation.Navigation;
 
 namespace ParkingCalculatorAutomation
 {
@@ -8,7 +9,7 @@ namespace ParkingCalculatorAutomation
         {
             get
             {
-                return Driver.Instance.FindElement(By.CssSelector("span.SubHead > font > b")).Text;
+                return ParkingCostNavigation.Total.Select();
             }
         }
 
@@ -16,7 +17,7 @@ namespace ParkingCalculatorAutomation
         {
             get
             {
-                return Driver.Instance.FindElement(By.CssSelector("span.BodyCopy > font > b")).Text;
+                return ParkingCostNavigation.Description.Select();
             }
         }
     }

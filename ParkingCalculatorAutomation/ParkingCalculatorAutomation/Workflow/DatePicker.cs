@@ -18,6 +18,7 @@ namespace ParkingCalculatorAutomation
 
             Driver.Instance.SwitchTo().Window(popupWindowHandle);
 
+            DatePickerSelector.SelectYear(date.Year.ToString());
             DatePickerSelector.SelectMonth(date.ToString("MMMM", CultureInfo.InvariantCulture));
             DatePickerSelector.SelectDay(date.Day.ToString());
             Driver.Instance.SwitchTo().Window(parentWin);
@@ -34,6 +35,7 @@ namespace ParkingCalculatorAutomation
 
             Driver.Instance.SwitchTo().Window(popupWindowHandle);
 
+            DatePickerSelector.SelectYear(date.Year.ToString());
             DatePickerSelector.SelectMonth(date.ToString("MMMM", CultureInfo.InvariantCulture));
             DatePickerSelector.SelectDay(date.Day.ToString());
             Driver.Instance.SwitchTo().Window(parentWin);

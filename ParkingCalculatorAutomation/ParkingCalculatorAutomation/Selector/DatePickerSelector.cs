@@ -1,4 +1,5 @@
 ﻿using System;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 
 namespace ParkingCalculatorAutomation
@@ -7,7 +8,19 @@ namespace ParkingCalculatorAutomation
     {
         internal static void SelectYear(string year)
         {
-            throw new NotImplementedException();
+            var yr = int.Parse(year);
+            int curr = DateTime.Now.Year;
+
+            do
+            {
+                curr = int.Parse(GetCurrentYear());
+
+                if (curr < yr)
+                    NextYear();
+                else if (curr > yr)
+                    PreviousYear();
+            } while (curr != yr);
+
         }
 
         internal static void SelectMonth(string month)
@@ -20,6 +33,21 @@ namespace ParkingCalculatorAutomation
         internal static void SelectDay(string day)
         {
             Selector.SelectByLinkText(day).Click();
+        }
+
+        private static string GetCurrentYear()
+        {
+            return Driver.Instance.FindElement(By.CssSelector("td > font > b")).Text;
+        }
+
+        private static void PreviousYear()
+        {
+            Selector.SelectByLinkText("<").Click();
+        }
+
+        private static void NextYear()
+        {
+            Selector.SelectByLinkText(">").Click();
         }
     }
 }
