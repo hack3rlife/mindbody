@@ -38,6 +38,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="WebDriver, Version=3.0.1.0, Culture=neutral, PublicKeyToken=null" />
   </ItemGroup>
@@ -56,17 +57,24 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="InputParserHelper.cs" />
     <Compile Include="ParkingCalculatorTest.cs" />
     <Compile Include="MindbodyTestCases.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="EdgeTestCases.cs" />
     <Compile Include="InvalidInputTestCases.cs" />
+    <Compile Include="DataDrivenTesttCases.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\ParkingCalculatorAutomation\ParkingCalculatorAutomation\ParkingCalculatorAutomation.csproj">
       <Project>{97924851-69ad-4a82-92fd-900880319f4d}</Project>
       <Name>ParkingCalculatorAutomation</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="data\input_values.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
