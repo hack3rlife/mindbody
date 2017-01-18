@@ -40,11 +40,12 @@ namespace ParkingCalculatorAutomation
                     Instance = new ChromeDriver();
                     break;
                 case BrowserType.InternetExplorer:
-                    Instance = new InternetExplorerDriver();
+                    Instance = new InternetExplorerDriver(Environment.CurrentDirectory + "\\Selenium\\");  // TODO: Get path from a config file
                     break;
                 case BrowserType.Firefox:
-                    Instance = new FirefoxDriver();
-                    break;
+                    throw new NotImplementedException(nameof(browser));
+                    //Instance = new FirefoxDriver();
+                    //break;
                 default:
                     Instance = new ChromeDriver();
                     break;
