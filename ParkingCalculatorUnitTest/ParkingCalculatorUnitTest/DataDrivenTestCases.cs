@@ -5,7 +5,7 @@ using ParkingCalculatorAutomation;
 namespace ParkingCalculatorUnitTest
 {
     [TestClass]
-    public class DataDrivenTesttCases : ParkingCalculatorTest
+    public class DataDrivenTestCases : ParkingCalculatorTest
     {
         public TestContext TestContext { get; set; }
 
