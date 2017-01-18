@@ -52,12 +52,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Navigation\ParkingCostNavigation.cs" />
+    <Compile Include="Navigation\ParkingPageNavigation.cs" />
     <Compile Include="Selector\DatePickerSelector.cs" />
     <Compile Include="Navigation\DatePickerNavigation.cs" />
     <Compile Include="Workflow\DatePicker.cs" />
     <Compile Include="Navigation\DateTimeNavigation.cs" />
     <Compile Include="Selector\DateTimeSelector.cs" />
-    <Compile Include="Pages\ParkingPageCost.cs" />
     <Compile Include="Navigation\ParkingLotNavigation.cs" />
     <Compile Include="Selector\ParkingLotSelector.cs" />
     <Compile Include="Enums\ParkingLotType.cs" />
@@ -66,6 +66,7 @@
     <Compile Include="Pages\ParkingPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Selector\Selector.cs" />
+    <Compile Include="Workflow\ParkingPageCost.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config">

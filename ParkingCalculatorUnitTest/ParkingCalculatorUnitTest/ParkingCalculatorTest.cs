@@ -5,17 +5,14 @@ namespace ParkingCalculatorUnitTest
 {
     public class ParkingCalculatorTest
     {
-        const string baseUrl = "http://adam.goucher.ca/parkcalc/index.php";
-
         [TestInitialize]
         public void Initilize()
         {
-            // TODO: Get this value from a config file
+            // TODO: Get BrowserType value from a config file
             Driver.Initialize(BrowserType.Chrome);
         }
 
         [TestCleanup]
-        [TestCategory("PositiveTests")]
         public void CleanUp()
         {
             Driver.Instance.Close();

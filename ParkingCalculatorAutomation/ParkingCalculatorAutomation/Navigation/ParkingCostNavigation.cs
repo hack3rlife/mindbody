@@ -16,6 +16,6 @@
             {
                 return Selector.SelectByCss("span.BodyCopy > font > b").Text;
             }
-        }
+        }       
     }
 }

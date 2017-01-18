@@ -35,8 +35,8 @@ namespace ParkingCalculatorUnitTest
                 .Calculate();
 
             // assert
-            Assert.AreEqual(expectedCost, ParkingPageCost.Total, "The cost is different");
-            Assert.AreEqual(expectedDuration, ParkingPageCost.Description, "Datetime is incorrect");
+            Assert.AreEqual(expectedCost, ParkingPage.Total, "The cost is different");
+            Assert.AreEqual(expectedDuration, ParkingPage.Description, "Datetime is incorrect");
         }
         
     }

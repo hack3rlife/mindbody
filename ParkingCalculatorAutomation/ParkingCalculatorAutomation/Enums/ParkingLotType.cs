@@ -1,9 +1,7 @@
-﻿using System;
-
-namespace ParkingCalculatorAutomation
+﻿namespace ParkingCalculatorAutomation
 {
     /// <summary>
-    /// 
+    /// ParkingLot Types
     /// </summary>
     public enum ParkingLotType
     {

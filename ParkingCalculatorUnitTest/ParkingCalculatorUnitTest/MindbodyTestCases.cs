@@ -23,8 +23,8 @@ namespace ParkingCalculatorUnitTest
                 .WithEndDateAndTime(new DateTime(2014, 1, 1, 23, 0, 0))
                 .Calculate();
 
-            Assert.AreEqual("$ 2.00", ParkingPageCost.Total, "The cost is different");
-            Assert.AreEqual("        (0 Days, 1 Hours, 0 Minutes)", ParkingPageCost.Description, "Datetime is incorrect");
+            Assert.AreEqual("$ 2.00", ParkingPage.Total, "The cost is different");
+            Assert.AreEqual("        (0 Days, 1 Hours, 0 Minutes)", ParkingPage.Description, "Datetime is incorrect");
 
         }
 
@@ -38,8 +38,8 @@ namespace ParkingCalculatorUnitTest
                 .WithEndDateAndTimeFromCalendar(new DateTime(2016, 2, 1, 0, 0, 0))
                 .Calculate();
 
-            Assert.AreEqual("$ 270.00", ParkingPageCost.Total, "The cost is different");
-            Assert.AreEqual("        (31 Days, 0 Hours, 0 Minutes)", ParkingPageCost.Description, "Datetime is incorrect");
+            Assert.AreEqual("$ 270.00", ParkingPage.Total, "The cost is different");
+            Assert.AreEqual("        (31 Days, 0 Hours, 0 Minutes)", ParkingPage.Description, "Datetime is incorrect");
         }
 
         [TestMethod]
@@ -52,7 +52,7 @@ namespace ParkingCalculatorUnitTest
                 .WithEndDateAndTime(new DateTime(2014, 1, 1, 0, 0, 0))
                 .Calculate();
 
-            Assert.AreEqual("ERROR! YOUR EXIT DATE OR TIME IS BEFORE YOUR ENTRY DATE OR TIME", ParkingPageCost.Total, "The expect cost is different");
+            Assert.AreEqual("ERROR! YOUR EXIT DATE OR TIME IS BEFORE YOUR ENTRY DATE OR TIME", ParkingPage.Total, "The expect cost is different");
         }
     }
 }

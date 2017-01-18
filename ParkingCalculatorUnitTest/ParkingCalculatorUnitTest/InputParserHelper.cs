@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using ParkingCalculatorAutomation;
 
 namespace ParkingCalculatorUnitTest
@@ -11,7 +7,7 @@ namespace ParkingCalculatorUnitTest
     {
         public static ParkingLotType GetParkingLotType(string type)
         {
-            switch (type)
+            switch (type.ToUpperInvariant())
             {
                 case "EP":
                     return ParkingLotType.EP;
@@ -24,7 +20,7 @@ namespace ParkingCalculatorUnitTest
                 case "VP":
                     return ParkingLotType.VP;
                 default:
-                    throw new InvalidCastException(nameof(type));
+                    throw new ArgumentException(nameof(type));
             }
         }
 
@@ -35,7 +31,7 @@ namespace ParkingCalculatorUnitTest
             if (DateTime.TryParse(date, out dt))
                 return dt;
 
-            throw new InvalidOperationException(nameof(date));
+            throw new ArgumentException(nameof(date));
         }
     }
 }

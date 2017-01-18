@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Globalization;
-using System.Threading;
 using OpenQA.Selenium.Support.UI;
 
 namespace ParkingCalculatorAutomation
@@ -24,7 +23,7 @@ namespace ParkingCalculatorAutomation
             Driver.Instance.SwitchTo().Window(parentWin);
         }
 
-        public static void SeExittDate(DateTime date)
+        public static void SeExitDate(DateTime date)
         {
             var parentWin = Driver.Instance.CurrentWindowHandle;
 
