@@ -76,7 +76,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="data\input_values.csv">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
