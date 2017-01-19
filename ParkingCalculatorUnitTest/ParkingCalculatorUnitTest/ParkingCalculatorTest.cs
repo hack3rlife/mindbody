@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Drawing.Imaging;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using OpenQA.Selenium;
 using ParkingCalculatorAutomation;
 
 namespace ParkingCalculatorUnitTest
@@ -11,6 +9,8 @@ namespace ParkingCalculatorUnitTest
     [DeploymentItem("IEDriverServer.exe")]
     public class ParkingCalculatorTest
     {
+        public TestContext TestContext { get; set; }
+
         [TestInitialize]
         public void Initilize()
         {
@@ -27,9 +27,12 @@ namespace ParkingCalculatorUnitTest
 
         public void TakeScreenShot(string testname)
         {
-            var screenShoot = ((ITakesScreenshot)Driver.Instance).GetScreenshot();
-            var filename = string.Format(@"{0}\{1}", Environment.CurrentDirectory, testname);
-            screenShoot.SaveAsFile(filename, ImageFormat.Jpeg);
-        }
+            var fileName = string.Format(@"{0}\{1}", Environment.CurrentDirectory, testname);
+
+            Driver.TakeScreenShot(fileName);
+
+            TestContext.AddResultFile(fileName);
+
+        }      
     }
 }

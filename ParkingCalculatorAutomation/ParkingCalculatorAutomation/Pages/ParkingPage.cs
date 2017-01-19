@@ -1,7 +1,6 @@
 ﻿using System;
-using OpenQA.Selenium;
+using System.Text;
 using ParkingCalculatorAutomation.Navigation;
-using ParkingCalculatorAutomation.Workflow;
 
 namespace ParkingCalculatorAutomation
 {
@@ -47,6 +46,15 @@ namespace ParkingCalculatorAutomation
         public static ParkingCommand Create()
         {
             return new ParkingCommand();
+        }
+
+        /// <summary>
+        /// Gets total and description value
+        /// </summary>
+        /// <returns>Total and Description</returns>
+        public new static string ToString()
+        {
+            return Total + Description;
         }
     }
 
@@ -186,7 +194,7 @@ namespace ParkingCalculatorAutomation
         /// Calculates the cost and duration based on <see cref="ParkingCommand"/> instance values.
         /// </summary>        
         public void Calculate()
-        {            
+        {
             // 1. Select Parking Lot Type from dropdown
             switch (this.lotType)
             {
@@ -292,8 +300,24 @@ namespace ParkingCalculatorAutomation
                 exitDate.SendKeys(this.exitDate.ToShortDateString());
             }
 
+            Console.WriteLine(this.ToString());
+
             // Get cost and duration
             ParkingPageNavigation.Submit.Click();
+        }
+
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine("ParkingPage parameters:");
+            sb.AppendFormat("Parkig Lot Type: {0}", this.lotType);
+            sb.AppendLine();
+            sb.AppendFormat("Entry Date and Time: {0}", this.entryDate);
+            sb.AppendLine();
+            sb.AppendFormat("Exit Date and Time: {0}", this.exitDate);
+            sb.AppendLine();
+
+            return sb.ToString();
         }
     }
 }

@@ -7,8 +7,6 @@ namespace ParkingCalculatorUnitTest
     [TestClass]
     public class MindbodyTestCases : ParkingCalculatorTest
     {
-        public  TestContext TestContext { get; set; }
-
         [TestInitialize]
         public void Initialize()
         {
@@ -26,6 +24,7 @@ namespace ParkingCalculatorUnitTest
                 .Calculate();
 
             this.TakeScreenShot(this.TestContext.TestName);
+            Console.WriteLine("Expected values: {0}", ParkingPage.ToString());
 
             Assert.AreEqual("$ 2.00", ParkingPage.Total, "The cost is different");
             Assert.AreEqual("        (0 Days, 1 Hours, 0 Minutes)", ParkingPage.Description, "Datetime is incorrect");
@@ -42,6 +41,7 @@ namespace ParkingCalculatorUnitTest
                 .Calculate();
 
             this.TakeScreenShot(this.TestContext.TestName);
+            Console.WriteLine("Expected values: {0}", ParkingPage.ToString());
 
             Assert.AreEqual("$ 270.00", ParkingPage.Total, "The cost is different");
             Assert.AreEqual("        (31 Days, 0 Hours, 0 Minutes)", ParkingPage.Description, "Datetime is incorrect");

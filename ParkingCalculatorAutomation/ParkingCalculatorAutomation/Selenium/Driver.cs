@@ -1,7 +1,7 @@
 ﻿using System;
+using System.Drawing.Imaging;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.IE;
 
 namespace ParkingCalculatorAutomation
@@ -46,14 +46,24 @@ namespace ParkingCalculatorAutomation
                     break;
                 case BrowserType.Firefox:
                     throw new NotImplementedException(nameof(browser));
-                    //Instance = new FirefoxDriver();
-                    //break;
+                //Instance = new FirefoxDriver();
+                //break;
                 default:
                     Instance = new ChromeDriver();
                     break;
             }
 
             Instance.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(5));
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="filename"></param>
+        public static void TakeScreenShot(string filename)
+        {
+            var screenShoot = ((ITakesScreenshot)Driver.Instance).GetScreenshot();
+            screenShoot.SaveAsFile(filename, ImageFormat.Jpeg);
         }
     }
 }
