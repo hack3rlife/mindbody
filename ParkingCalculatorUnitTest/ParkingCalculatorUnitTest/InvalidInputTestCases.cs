@@ -65,7 +65,7 @@ namespace ParkingCalculatorUnitTest
         [TestMethod]
         [TestCategory("InvalidInput")]
         [Ignore]
-        public void InvalidTime_NonNumericVlues()
+        public void InvalidTime_NonNumericValues()
         {
             ParkingPage.Create()
               .WithParkingLot(ParkingLotType.STP)

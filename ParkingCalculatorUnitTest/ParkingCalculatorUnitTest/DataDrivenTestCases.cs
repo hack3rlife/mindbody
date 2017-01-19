@@ -34,6 +34,8 @@ namespace ParkingCalculatorUnitTest
                 .WithEndDateAndTime(exitTime)
                 .Calculate();
 
+            this.TakeScreenShot(this.TestContext.TestName + DateTime.Now.Ticks);
+            
             // assert
             Assert.AreEqual(expectedCost, ParkingPage.Total, "The cost is different");
             Assert.AreEqual(expectedDuration, ParkingPage.Description, "Datetime is incorrect");

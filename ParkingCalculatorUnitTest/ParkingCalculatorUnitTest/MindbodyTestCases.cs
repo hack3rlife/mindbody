@@ -7,6 +7,8 @@ namespace ParkingCalculatorUnitTest
     [TestClass]
     public class MindbodyTestCases : ParkingCalculatorTest
     {
+        public  TestContext TestContext { get; set; }
+
         [TestInitialize]
         public void Initialize()
         {
@@ -23,9 +25,10 @@ namespace ParkingCalculatorUnitTest
                 .WithEndDateAndTime(new DateTime(2014, 1, 1, 23, 0, 0))
                 .Calculate();
 
+            this.TakeScreenShot(this.TestContext.TestName);
+
             Assert.AreEqual("$ 2.00", ParkingPage.Total, "The cost is different");
             Assert.AreEqual("        (0 Days, 1 Hours, 0 Minutes)", ParkingPage.Description, "Datetime is incorrect");
-
         }
 
         [TestMethod]
@@ -37,6 +40,8 @@ namespace ParkingCalculatorUnitTest
                 .WithStartDateAndTimeFromCalendar(new DateTime(2016, 1, 1, 0, 0, 0))
                 .WithEndDateAndTimeFromCalendar(new DateTime(2016, 2, 1, 0, 0, 0))
                 .Calculate();
+
+            this.TakeScreenShot(this.TestContext.TestName);
 
             Assert.AreEqual("$ 270.00", ParkingPage.Total, "The cost is different");
             Assert.AreEqual("        (31 Days, 0 Hours, 0 Minutes)", ParkingPage.Description, "Datetime is incorrect");
@@ -51,6 +56,8 @@ namespace ParkingCalculatorUnitTest
                  .WithStartDateAndTime(new DateTime(2014, 2, 1, 0, 0, 0))
                 .WithEndDateAndTime(new DateTime(2014, 1, 1, 0, 0, 0))
                 .Calculate();
+
+            this.TakeScreenShot(this.TestContext.TestName);
 
             Assert.AreEqual("ERROR! YOUR EXIT DATE OR TIME IS BEFORE YOUR ENTRY DATE OR TIME", ParkingPage.Total, "The expect cost is different");
         }

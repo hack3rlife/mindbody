@@ -37,10 +37,12 @@ namespace ParkingCalculatorAutomation
             switch (browser)
             {
                 case BrowserType.Chrome:
-                    Instance = new ChromeDriver();
+                    var options = new ChromeOptions();
+                    options.AddArgument("no-sandbox");
+                    Instance = new ChromeDriver(options);
                     break;
                 case BrowserType.InternetExplorer:
-                    Instance = new InternetExplorerDriver(Environment.CurrentDirectory + "\\Selenium\\");  // TODO: Get path from a config file
+                    Instance = new InternetExplorerDriver();
                     break;
                 case BrowserType.Firefox:
                     throw new NotImplementedException(nameof(browser));
