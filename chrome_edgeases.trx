@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="a18a5fd8-7b61-4e58-9634-4897da988e82" name="eesphec@US00126205 2017-01-20 10:19:53" runUser="ERICSSON\eesphec" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Default Test Settings" id="51b07a7a-2518-4902-a096-dc73020ce68d">
+    <Deployment userDeploymentRoot="c:\git\mindbody" useDefaultDeploymentRoot="false" runDeploymentRoot="eesphec_US00126205 2017-01-20 10_19_53" />
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+    <Properties />
+  </TestSettings>
+  <Times creation="2017-01-20T10:19:53.3694194-08:00" queuing="2017-01-20T10:19:53.7694306-08:00" start="2017-01-20T10:19:53.8794363-08:00" finish="2017-01-20T10:22:15.2128974-08:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="5" executed="5" passed="5" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="ParkingCalculator_When_IsLeapYear_MonthScenario" storage="automation\chrome\parkingcalculatorunittest.dll" id="f90e134e-012d-1af9-2102-8fe22e47b020">
+      <TestCategory>
+        <TestCategoryItem TestCategory="EdgeCases" />
+      </TestCategory>
+      <DeploymentItems>
+        <DeploymentItem filename="chromedriver.exe" />
+        <DeploymentItem filename="IEDriverServer.exe" />
+      </DeploymentItems>
+      <Execution id="124c5533-17ab-4190-9603-3b6bda82bc08" />
+      <TestMethod codeBase="c:/git/mindbody/automation/chrome/ParkingCalculatorUnitTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ParkingCalculatorUnitTest.EdgeTestCases, ParkingCalculatorUnitTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ParkingCalculator_When_IsLeapYear_MonthScenario" />
+    </UnitTest>
+    <UnitTest name="ParkingCalculator_When_FractionTime_IsUpperBound" storage="automation\chrome\parkingcalculatorunittest.dll" id="3f77f3fb-28b8-3294-d837-c376dee48228">
+      <TestCategory>
+        <TestCategoryItem TestCategory="EdgeCases" />
+      </TestCategory>
+      <DeploymentItems>
+        <DeploymentItem filename="chromedriver.exe" />
+        <DeploymentItem filename="IEDriverServer.exe" />
+      </DeploymentItems>
+      <Execution id="d738e62d-5a1a-4605-99cb-650a18539e48" />
+      <TestMethod codeBase="c:/git/mindbody/automation/chrome/ParkingCalculatorUnitTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ParkingCalculatorUnitTest.EdgeTestCases, ParkingCalculatorUnitTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ParkingCalculator_When_FractionTime_IsUpperBound" />
+    </UnitTest>
+    <UnitTest name="ParkingCalculator_When_DayLightSavingTime" storage="automation\chrome\parkingcalculatorunittest.dll" id="b0b60ba9-7f33-0694-a26c-6b1bfb23381f">
+      <TestCategory>
+        <TestCategoryItem TestCategory="EdgeCases" />
+      </TestCategory>
+      <DeploymentItems>
+        <DeploymentItem filename="chromedriver.exe" />
+        <DeploymentItem filename="IEDriverServer.exe" />
+      </DeploymentItems>
+      <Execution id="ef4ad8c3-2023-46ac-92b7-2847a54c8fb5" />
+      <TestMethod codeBase="c:/git/mindbody/automation/chrome/ParkingCalculatorUnitTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ParkingCalculatorUnitTest.EdgeTestCases, ParkingCalculatorUnitTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ParkingCalculator_When_DayLightSavingTime" />
+    </UnitTest>
+    <UnitTest name="ParkingCalculator_When_IsLeapYear_YearScenario" storage="automation\chrome\parkingcalculatorunittest.dll" id="b498bf41-64cc-66ba-1dd4-1308685800c2">
+      <TestCategory>
+        <TestCategoryItem TestCategory="EdgeCases" />
+      </TestCategory>
+      <DeploymentItems>
+        <DeploymentItem filename="chromedriver.exe" />
+        <DeploymentItem filename="IEDriverServer.exe" />
+      </DeploymentItems>
+      <Execution id="f044e3a1-0570-450a-8753-42e959475d3e" />
+      <TestMethod codeBase="c:/git/mindbody/automation/chrome/ParkingCalculatorUnitTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ParkingCalculatorUnitTest.EdgeTestCases, ParkingCalculatorUnitTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ParkingCalculator_When_IsLeapYear_YearScenario" />
+    </UnitTest>
+    <UnitTest name="ParkingCalculator_When_FractionTime_IsLowerBound" storage="automation\chrome\parkingcalculatorunittest.dll" id="49ce5f51-93b8-92bf-30af-eae8f4f63bed">
+      <TestCategory>
+        <TestCategoryItem TestCategory="EdgeCases" />
+      </TestCategory>
+      <DeploymentItems>
+        <DeploymentItem filename="chromedriver.exe" />
+        <DeploymentItem filename="IEDriverServer.exe" />
+      </DeploymentItems>
+      <Execution id="c6f50218-f104-4650-9972-0944acf52758" />
+      <TestMethod codeBase="c:/git/mindbody/automation/chrome/ParkingCalculatorUnitTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ParkingCalculatorUnitTest.EdgeTestCases, ParkingCalculatorUnitTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ParkingCalculator_When_FractionTime_IsLowerBound" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="b0b60ba9-7f33-0694-a26c-6b1bfb23381f" executionId="ef4ad8c3-2023-46ac-92b7-2847a54c8fb5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="49ce5f51-93b8-92bf-30af-eae8f4f63bed" executionId="c6f50218-f104-4650-9972-0944acf52758" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3f77f3fb-28b8-3294-d837-c376dee48228" executionId="d738e62d-5a1a-4605-99cb-650a18539e48" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f90e134e-012d-1af9-2102-8fe22e47b020" executionId="124c5533-17ab-4190-9603-3b6bda82bc08" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b498bf41-64cc-66ba-1dd4-1308685800c2" executionId="f044e3a1-0570-450a-8753-42e959475d3e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="ef4ad8c3-2023-46ac-92b7-2847a54c8fb5" testId="b0b60ba9-7f33-0694-a26c-6b1bfb23381f" testName="ParkingCalculator_When_DayLightSavingTime" computerName="US00126205" duration="00:00:29.4843421" startTime="2017-01-20T10:19:53.9074379-08:00" endTime="2017-01-20T10:20:23.5819963-08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ef4ad8c3-2023-46ac-92b7-2847a54c8fb5">
+      <Output>
+        <StdOut>ParkingPage parameters:
+Parkig Lot Type: LTS
+Entry Date and Time: 3/12/2016 9:30:00 PM
+Exit Date and Time: 3/13/2016 11:15:00 PM
+
+Expected values: $ 12.00        (1 Days, 0 Hours, 45 Minutes)</StdOut>
+      </Output>
+      <ResultFiles>
+        <ResultFile path="US00126205\ParkingCalculator_When_DayLightSavingTime" />
+      </ResultFiles>
+    </UnitTestResult>
+    <UnitTestResult executionId="c6f50218-f104-4650-9972-0944acf52758" testId="49ce5f51-93b8-92bf-30af-eae8f4f63bed" testName="ParkingCalculator_When_FractionTime_IsLowerBound" computerName="US00126205" duration="00:00:27.7939699" startTime="2017-01-20T10:20:23.5939964-08:00" endTime="2017-01-20T10:20:51.4014625-08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c6f50218-f104-4650-9972-0944acf52758">
+      <Output>
+        <StdOut>ParkingPage parameters:
+Parkig Lot Type: STP
+Entry Date and Time: 1/20/2017 10:20:46 AM
+Exit Date and Time: 1/20/2017 11:21:46 AM
+
+Expected values: $ 3.00        (0 Days, 1 Hours, 1 Minutes)</StdOut>
+      </Output>
+      <ResultFiles>
+        <ResultFile path="US00126205\ParkingCalculator_When_FractionTime_IsLowerBound" />
+      </ResultFiles>
+    </UnitTestResult>
+    <UnitTestResult executionId="d738e62d-5a1a-4605-99cb-650a18539e48" testId="3f77f3fb-28b8-3294-d837-c376dee48228" testName="ParkingCalculator_When_FractionTime_IsUpperBound" computerName="US00126205" duration="00:00:27.8027827" startTime="2017-01-20T10:20:51.4044626-08:00" endTime="2017-01-20T10:21:19.2109381-08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d738e62d-5a1a-4605-99cb-650a18539e48">
+      <Output>
+        <StdOut>ParkingPage parameters:
+Parkig Lot Type: STP
+Entry Date and Time: 1/20/2017 10:21:14 AM
+Exit Date and Time: 1/20/2017 11:52:14 AM
+
+Expected values: $ 4.00        (0 Days, 1 Hours, 31 Minutes)</StdOut>
+      </Output>
+      <ResultFiles>
+        <ResultFile path="US00126205\ParkingCalculator_When_FractionTime_IsUpperBound" />
+      </ResultFiles>
+    </UnitTestResult>
+    <UnitTestResult executionId="124c5533-17ab-4190-9603-3b6bda82bc08" testId="f90e134e-012d-1af9-2102-8fe22e47b020" testName="ParkingCalculator_When_IsLeapYear_MonthScenario" computerName="US00126205" duration="00:00:28.0210852" startTime="2017-01-20T10:21:19.2109381-08:00" endTime="2017-01-20T10:21:47.2414147-08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="124c5533-17ab-4190-9603-3b6bda82bc08">
+      <Output>
+        <StdOut>ParkingPage parameters:
+Parkig Lot Type: STP
+Entry Date and Time: 2/1/2016 12:00:00 AM
+Exit Date and Time: 3/1/2016 12:00:00 AM
+
+Expected values: $ 756.00        (29 Days, 0 Hours, 0 Minutes)</StdOut>
+      </Output>
+      <ResultFiles>
+        <ResultFile path="US00126205\ParkingCalculator_When_IsLeapYear_MonthScenario" />
+      </ResultFiles>
+    </UnitTestResult>
+    <UnitTestResult executionId="f044e3a1-0570-450a-8753-42e959475d3e" testId="b498bf41-64cc-66ba-1dd4-1308685800c2" testName="ParkingCalculator_When_IsLeapYear_YearScenario" computerName="US00126205" duration="00:00:27.9117305" startTime="2017-01-20T10:21:47.2414147-08:00" endTime="2017-01-20T10:22:15.1658953-08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f044e3a1-0570-450a-8753-42e959475d3e">
+      <Output>
+        <StdOut>ParkingPage parameters:
+Parkig Lot Type: STP
+Entry Date and Time: 12/31/2015 12:00:00 AM
+Exit Date and Time: 1/1/2017 12:00:00 AM
+
+Expected values: $ 9,544.00        (367 Days, 0 Hours, 0 Minutes)</StdOut>
+      </Output>
+      <ResultFiles>
+        <ResultFile path="US00126205\ParkingCalculator_When_IsLeapYear_YearScenario" />
+      </ResultFiles>
+    </UnitTestResult>
+  </Results>
+</TestRun>

@@ -21,3 +21,6 @@ mstest /testcontainer:automation\ie\ParkingCalculatorUnitTest.dll /resultsfile:i
 
 mstest /testcontainer:automation\ie\ParkingCalculatorUnitTest.dll /resultsfile:ie_invalidinput.trx  /category:InvalidInput
 
+
+72 - 100
+	 120
